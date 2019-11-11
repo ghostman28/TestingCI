@@ -1,0 +1,1612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="login_cms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="login_cmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login_cmsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="lupa_password_cms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lupa_password_cmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lupa_password_cmsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_hadiah">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_hadiahResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="update_hadiahResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="add_kupon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="add_kuponResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="add_kuponResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tambah_bucket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tambah_bucketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tambah_bucketResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="create_otp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="create_otpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="create_otpResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lupa_pass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lupa_passResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lupa_passResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validation_otp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validation_otpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validation_otpResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sign_up">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sign_upResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sign_upResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ganti_email">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ganti_emailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ganti_emailResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="edit_profile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="edit_profileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="edit_profileResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ganti_nomor_hp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ganti_nomor_hpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ganti_nomor_hpResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="contact_us">
+        <s:complexType />
+      </s:element>
+      <s:element name="contact_usResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="contact_usResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_faq">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_faqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_faqResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_kebijakan_privasi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_kebijakan_privasiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_kebijakan_privasiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="activation_redeem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="activation_redeemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="activation_redeemResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_aktivitas_user">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_aktivitas_userResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_aktivitas_userResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="page_pesan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="page_pesanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="page_pesanResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="page_pesan_detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="page_pesan_detailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="page_pesan_detailResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="add_promo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="add_promoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="add_promoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="promo_list">
+        <s:complexType />
+      </s:element>
+      <s:element name="promo_listResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="promo_listResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="promo_list_by_id">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="promo_list_by_idResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="promo_list_by_idResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="add_list_hadiah">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="add_list_hadiahResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="add_list_hadiahResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="page_poin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="page_poinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="page_poinResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="page_stamps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="page_stampsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="page_stampsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="list_hadiah">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="list_hadiahResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="list_hadiahResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="detail_hadiah">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="detail_hadiahResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="detail_hadiahResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="redeem_hadiah">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="redeem_hadiahResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="redeem_hadiahResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="kupon_page">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="kupon_pageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kupon_pageResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="detail_kupon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="detail_kuponResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="detail_kuponResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="redeem_kupon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="redeem_kuponResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="redeem_kuponResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckPoin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckPoinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckPoinResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="earning_point">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="earning_pointResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="earning_pointResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="redeem_point">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="redeem_pointResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="redeem_pointResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="redeem_stamps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="redeem_stampsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="redeem_stampsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cancel_redeem_point">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cancel_redeem_pointResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cancel_redeem_pointResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cancel_redeem_stamps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cancel_redeem_stampsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cancel_redeem_stampsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="login_cmsSoapIn">
+    <wsdl:part name="parameters" element="tns:login_cms" />
+  </wsdl:message>
+  <wsdl:message name="login_cmsSoapOut">
+    <wsdl:part name="parameters" element="tns:login_cmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="lupa_password_cmsSoapIn">
+    <wsdl:part name="parameters" element="tns:lupa_password_cms" />
+  </wsdl:message>
+  <wsdl:message name="lupa_password_cmsSoapOut">
+    <wsdl:part name="parameters" element="tns:lupa_password_cmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_hadiahSoapIn">
+    <wsdl:part name="parameters" element="tns:update_hadiah" />
+  </wsdl:message>
+  <wsdl:message name="update_hadiahSoapOut">
+    <wsdl:part name="parameters" element="tns:update_hadiahResponse" />
+  </wsdl:message>
+  <wsdl:message name="add_kuponSoapIn">
+    <wsdl:part name="parameters" element="tns:add_kupon" />
+  </wsdl:message>
+  <wsdl:message name="add_kuponSoapOut">
+    <wsdl:part name="parameters" element="tns:add_kuponResponse" />
+  </wsdl:message>
+  <wsdl:message name="tambah_bucketSoapIn">
+    <wsdl:part name="parameters" element="tns:tambah_bucket" />
+  </wsdl:message>
+  <wsdl:message name="tambah_bucketSoapOut">
+    <wsdl:part name="parameters" element="tns:tambah_bucketResponse" />
+  </wsdl:message>
+  <wsdl:message name="create_otpSoapIn">
+    <wsdl:part name="parameters" element="tns:create_otp" />
+  </wsdl:message>
+  <wsdl:message name="create_otpSoapOut">
+    <wsdl:part name="parameters" element="tns:create_otpResponse" />
+  </wsdl:message>
+  <wsdl:message name="lupa_passSoapIn">
+    <wsdl:part name="parameters" element="tns:lupa_pass" />
+  </wsdl:message>
+  <wsdl:message name="lupa_passSoapOut">
+    <wsdl:part name="parameters" element="tns:lupa_passResponse" />
+  </wsdl:message>
+  <wsdl:message name="validation_otpSoapIn">
+    <wsdl:part name="parameters" element="tns:validation_otp" />
+  </wsdl:message>
+  <wsdl:message name="validation_otpSoapOut">
+    <wsdl:part name="parameters" element="tns:validation_otpResponse" />
+  </wsdl:message>
+  <wsdl:message name="sign_upSoapIn">
+    <wsdl:part name="parameters" element="tns:sign_up" />
+  </wsdl:message>
+  <wsdl:message name="sign_upSoapOut">
+    <wsdl:part name="parameters" element="tns:sign_upResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapIn">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapOut">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ganti_emailSoapIn">
+    <wsdl:part name="parameters" element="tns:ganti_email" />
+  </wsdl:message>
+  <wsdl:message name="ganti_emailSoapOut">
+    <wsdl:part name="parameters" element="tns:ganti_emailResponse" />
+  </wsdl:message>
+  <wsdl:message name="edit_profileSoapIn">
+    <wsdl:part name="parameters" element="tns:edit_profile" />
+  </wsdl:message>
+  <wsdl:message name="edit_profileSoapOut">
+    <wsdl:part name="parameters" element="tns:edit_profileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ganti_nomor_hpSoapIn">
+    <wsdl:part name="parameters" element="tns:ganti_nomor_hp" />
+  </wsdl:message>
+  <wsdl:message name="ganti_nomor_hpSoapOut">
+    <wsdl:part name="parameters" element="tns:ganti_nomor_hpResponse" />
+  </wsdl:message>
+  <wsdl:message name="contact_usSoapIn">
+    <wsdl:part name="parameters" element="tns:contact_us" />
+  </wsdl:message>
+  <wsdl:message name="contact_usSoapOut">
+    <wsdl:part name="parameters" element="tns:contact_usResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_faqSoapIn">
+    <wsdl:part name="parameters" element="tns:get_faq" />
+  </wsdl:message>
+  <wsdl:message name="get_faqSoapOut">
+    <wsdl:part name="parameters" element="tns:get_faqResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_kebijakan_privasiSoapIn">
+    <wsdl:part name="parameters" element="tns:get_kebijakan_privasi" />
+  </wsdl:message>
+  <wsdl:message name="get_kebijakan_privasiSoapOut">
+    <wsdl:part name="parameters" element="tns:get_kebijakan_privasiResponse" />
+  </wsdl:message>
+  <wsdl:message name="activation_redeemSoapIn">
+    <wsdl:part name="parameters" element="tns:activation_redeem" />
+  </wsdl:message>
+  <wsdl:message name="activation_redeemSoapOut">
+    <wsdl:part name="parameters" element="tns:activation_redeemResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_aktivitas_userSoapIn">
+    <wsdl:part name="parameters" element="tns:get_aktivitas_user" />
+  </wsdl:message>
+  <wsdl:message name="get_aktivitas_userSoapOut">
+    <wsdl:part name="parameters" element="tns:get_aktivitas_userResponse" />
+  </wsdl:message>
+  <wsdl:message name="page_pesanSoapIn">
+    <wsdl:part name="parameters" element="tns:page_pesan" />
+  </wsdl:message>
+  <wsdl:message name="page_pesanSoapOut">
+    <wsdl:part name="parameters" element="tns:page_pesanResponse" />
+  </wsdl:message>
+  <wsdl:message name="page_pesan_detailSoapIn">
+    <wsdl:part name="parameters" element="tns:page_pesan_detail" />
+  </wsdl:message>
+  <wsdl:message name="page_pesan_detailSoapOut">
+    <wsdl:part name="parameters" element="tns:page_pesan_detailResponse" />
+  </wsdl:message>
+  <wsdl:message name="add_promoSoapIn">
+    <wsdl:part name="parameters" element="tns:add_promo" />
+  </wsdl:message>
+  <wsdl:message name="add_promoSoapOut">
+    <wsdl:part name="parameters" element="tns:add_promoResponse" />
+  </wsdl:message>
+  <wsdl:message name="promo_listSoapIn">
+    <wsdl:part name="parameters" element="tns:promo_list" />
+  </wsdl:message>
+  <wsdl:message name="promo_listSoapOut">
+    <wsdl:part name="parameters" element="tns:promo_listResponse" />
+  </wsdl:message>
+  <wsdl:message name="promo_list_by_idSoapIn">
+    <wsdl:part name="parameters" element="tns:promo_list_by_id" />
+  </wsdl:message>
+  <wsdl:message name="promo_list_by_idSoapOut">
+    <wsdl:part name="parameters" element="tns:promo_list_by_idResponse" />
+  </wsdl:message>
+  <wsdl:message name="add_list_hadiahSoapIn">
+    <wsdl:part name="parameters" element="tns:add_list_hadiah" />
+  </wsdl:message>
+  <wsdl:message name="add_list_hadiahSoapOut">
+    <wsdl:part name="parameters" element="tns:add_list_hadiahResponse" />
+  </wsdl:message>
+  <wsdl:message name="page_poinSoapIn">
+    <wsdl:part name="parameters" element="tns:page_poin" />
+  </wsdl:message>
+  <wsdl:message name="page_poinSoapOut">
+    <wsdl:part name="parameters" element="tns:page_poinResponse" />
+  </wsdl:message>
+  <wsdl:message name="page_stampsSoapIn">
+    <wsdl:part name="parameters" element="tns:page_stamps" />
+  </wsdl:message>
+  <wsdl:message name="page_stampsSoapOut">
+    <wsdl:part name="parameters" element="tns:page_stampsResponse" />
+  </wsdl:message>
+  <wsdl:message name="list_hadiahSoapIn">
+    <wsdl:part name="parameters" element="tns:list_hadiah" />
+  </wsdl:message>
+  <wsdl:message name="list_hadiahSoapOut">
+    <wsdl:part name="parameters" element="tns:list_hadiahResponse" />
+  </wsdl:message>
+  <wsdl:message name="detail_hadiahSoapIn">
+    <wsdl:part name="parameters" element="tns:detail_hadiah" />
+  </wsdl:message>
+  <wsdl:message name="detail_hadiahSoapOut">
+    <wsdl:part name="parameters" element="tns:detail_hadiahResponse" />
+  </wsdl:message>
+  <wsdl:message name="redeem_hadiahSoapIn">
+    <wsdl:part name="parameters" element="tns:redeem_hadiah" />
+  </wsdl:message>
+  <wsdl:message name="redeem_hadiahSoapOut">
+    <wsdl:part name="parameters" element="tns:redeem_hadiahResponse" />
+  </wsdl:message>
+  <wsdl:message name="kupon_pageSoapIn">
+    <wsdl:part name="parameters" element="tns:kupon_page" />
+  </wsdl:message>
+  <wsdl:message name="kupon_pageSoapOut">
+    <wsdl:part name="parameters" element="tns:kupon_pageResponse" />
+  </wsdl:message>
+  <wsdl:message name="detail_kuponSoapIn">
+    <wsdl:part name="parameters" element="tns:detail_kupon" />
+  </wsdl:message>
+  <wsdl:message name="detail_kuponSoapOut">
+    <wsdl:part name="parameters" element="tns:detail_kuponResponse" />
+  </wsdl:message>
+  <wsdl:message name="redeem_kuponSoapIn">
+    <wsdl:part name="parameters" element="tns:redeem_kupon" />
+  </wsdl:message>
+  <wsdl:message name="redeem_kuponSoapOut">
+    <wsdl:part name="parameters" element="tns:redeem_kuponResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckPoinSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckPoin" />
+  </wsdl:message>
+  <wsdl:message name="CheckPoinSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckPoinResponse" />
+  </wsdl:message>
+  <wsdl:message name="earning_pointSoapIn">
+    <wsdl:part name="parameters" element="tns:earning_point" />
+  </wsdl:message>
+  <wsdl:message name="earning_pointSoapOut">
+    <wsdl:part name="parameters" element="tns:earning_pointResponse" />
+  </wsdl:message>
+  <wsdl:message name="redeem_pointSoapIn">
+    <wsdl:part name="parameters" element="tns:redeem_point" />
+  </wsdl:message>
+  <wsdl:message name="redeem_pointSoapOut">
+    <wsdl:part name="parameters" element="tns:redeem_pointResponse" />
+  </wsdl:message>
+  <wsdl:message name="redeem_stampsSoapIn">
+    <wsdl:part name="parameters" element="tns:redeem_stamps" />
+  </wsdl:message>
+  <wsdl:message name="redeem_stampsSoapOut">
+    <wsdl:part name="parameters" element="tns:redeem_stampsResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancel_redeem_pointSoapIn">
+    <wsdl:part name="parameters" element="tns:cancel_redeem_point" />
+  </wsdl:message>
+  <wsdl:message name="cancel_redeem_pointSoapOut">
+    <wsdl:part name="parameters" element="tns:cancel_redeem_pointResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancel_redeem_stampsSoapIn">
+    <wsdl:part name="parameters" element="tns:cancel_redeem_stamps" />
+  </wsdl:message>
+  <wsdl:message name="cancel_redeem_stampsSoapOut">
+    <wsdl:part name="parameters" element="tns:cancel_redeem_stampsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="login_cms">
+      <wsdl:input message="tns:login_cmsSoapIn" />
+      <wsdl:output message="tns:login_cmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lupa_password_cms">
+      <wsdl:input message="tns:lupa_password_cmsSoapIn" />
+      <wsdl:output message="tns:lupa_password_cmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_hadiah">
+      <wsdl:input message="tns:update_hadiahSoapIn" />
+      <wsdl:output message="tns:update_hadiahSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="add_kupon">
+      <wsdl:input message="tns:add_kuponSoapIn" />
+      <wsdl:output message="tns:add_kuponSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tambah_bucket">
+      <wsdl:input message="tns:tambah_bucketSoapIn" />
+      <wsdl:output message="tns:tambah_bucketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="create_otp">
+      <wsdl:input message="tns:create_otpSoapIn" />
+      <wsdl:output message="tns:create_otpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lupa_pass">
+      <wsdl:input message="tns:lupa_passSoapIn" />
+      <wsdl:output message="tns:lupa_passSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validation_otp">
+      <wsdl:input message="tns:validation_otpSoapIn" />
+      <wsdl:output message="tns:validation_otpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sign_up">
+      <wsdl:input message="tns:sign_upSoapIn" />
+      <wsdl:output message="tns:sign_upSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginSoapIn" />
+      <wsdl:output message="tns:loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ganti_email">
+      <wsdl:input message="tns:ganti_emailSoapIn" />
+      <wsdl:output message="tns:ganti_emailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="edit_profile">
+      <wsdl:input message="tns:edit_profileSoapIn" />
+      <wsdl:output message="tns:edit_profileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ganti_nomor_hp">
+      <wsdl:input message="tns:ganti_nomor_hpSoapIn" />
+      <wsdl:output message="tns:ganti_nomor_hpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="contact_us">
+      <wsdl:input message="tns:contact_usSoapIn" />
+      <wsdl:output message="tns:contact_usSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_faq">
+      <wsdl:input message="tns:get_faqSoapIn" />
+      <wsdl:output message="tns:get_faqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_kebijakan_privasi">
+      <wsdl:input message="tns:get_kebijakan_privasiSoapIn" />
+      <wsdl:output message="tns:get_kebijakan_privasiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="activation_redeem">
+      <wsdl:input message="tns:activation_redeemSoapIn" />
+      <wsdl:output message="tns:activation_redeemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_aktivitas_user">
+      <wsdl:input message="tns:get_aktivitas_userSoapIn" />
+      <wsdl:output message="tns:get_aktivitas_userSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="page_pesan">
+      <wsdl:input message="tns:page_pesanSoapIn" />
+      <wsdl:output message="tns:page_pesanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="page_pesan_detail">
+      <wsdl:input message="tns:page_pesan_detailSoapIn" />
+      <wsdl:output message="tns:page_pesan_detailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="add_promo">
+      <wsdl:input message="tns:add_promoSoapIn" />
+      <wsdl:output message="tns:add_promoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="promo_list">
+      <wsdl:input message="tns:promo_listSoapIn" />
+      <wsdl:output message="tns:promo_listSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="promo_list_by_id">
+      <wsdl:input message="tns:promo_list_by_idSoapIn" />
+      <wsdl:output message="tns:promo_list_by_idSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="add_list_hadiah">
+      <wsdl:input message="tns:add_list_hadiahSoapIn" />
+      <wsdl:output message="tns:add_list_hadiahSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="page_poin">
+      <wsdl:input message="tns:page_poinSoapIn" />
+      <wsdl:output message="tns:page_poinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="page_stamps">
+      <wsdl:input message="tns:page_stampsSoapIn" />
+      <wsdl:output message="tns:page_stampsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="list_hadiah">
+      <wsdl:input message="tns:list_hadiahSoapIn" />
+      <wsdl:output message="tns:list_hadiahSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="detail_hadiah">
+      <wsdl:input message="tns:detail_hadiahSoapIn" />
+      <wsdl:output message="tns:detail_hadiahSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="redeem_hadiah">
+      <wsdl:input message="tns:redeem_hadiahSoapIn" />
+      <wsdl:output message="tns:redeem_hadiahSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="kupon_page">
+      <wsdl:input message="tns:kupon_pageSoapIn" />
+      <wsdl:output message="tns:kupon_pageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="detail_kupon">
+      <wsdl:input message="tns:detail_kuponSoapIn" />
+      <wsdl:output message="tns:detail_kuponSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="redeem_kupon">
+      <wsdl:input message="tns:redeem_kuponSoapIn" />
+      <wsdl:output message="tns:redeem_kuponSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPoin">
+      <wsdl:input message="tns:CheckPoinSoapIn" />
+      <wsdl:output message="tns:CheckPoinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="earning_point">
+      <wsdl:input message="tns:earning_pointSoapIn" />
+      <wsdl:output message="tns:earning_pointSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="redeem_point">
+      <wsdl:input message="tns:redeem_pointSoapIn" />
+      <wsdl:output message="tns:redeem_pointSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="redeem_stamps">
+      <wsdl:input message="tns:redeem_stampsSoapIn" />
+      <wsdl:output message="tns:redeem_stampsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cancel_redeem_point">
+      <wsdl:input message="tns:cancel_redeem_pointSoapIn" />
+      <wsdl:output message="tns:cancel_redeem_pointSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cancel_redeem_stamps">
+      <wsdl:input message="tns:cancel_redeem_stampsSoapIn" />
+      <wsdl:output message="tns:cancel_redeem_stampsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="login_cms">
+      <soap:operation soapAction="http://tempuri.org/login_cms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lupa_password_cms">
+      <soap:operation soapAction="http://tempuri.org/lupa_password_cms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_hadiah">
+      <soap:operation soapAction="http://tempuri.org/update_hadiah" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_kupon">
+      <soap:operation soapAction="http://tempuri.org/add_kupon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tambah_bucket">
+      <soap:operation soapAction="http://tempuri.org/tambah_bucket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="create_otp">
+      <soap:operation soapAction="http://tempuri.org/create_otp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lupa_pass">
+      <soap:operation soapAction="http://tempuri.org/lupa_pass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validation_otp">
+      <soap:operation soapAction="http://tempuri.org/validation_otp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sign_up">
+      <soap:operation soapAction="http://tempuri.org/sign_up" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ganti_email">
+      <soap:operation soapAction="http://tempuri.org/ganti_email" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="edit_profile">
+      <soap:operation soapAction="http://tempuri.org/edit_profile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ganti_nomor_hp">
+      <soap:operation soapAction="http://tempuri.org/ganti_nomor_hp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="contact_us">
+      <soap:operation soapAction="http://tempuri.org/contact_us" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_faq">
+      <soap:operation soapAction="http://tempuri.org/get_faq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_kebijakan_privasi">
+      <soap:operation soapAction="http://tempuri.org/get_kebijakan_privasi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activation_redeem">
+      <soap:operation soapAction="http://tempuri.org/activation_redeem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_aktivitas_user">
+      <soap:operation soapAction="http://tempuri.org/get_aktivitas_user" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="page_pesan">
+      <soap:operation soapAction="http://tempuri.org/page_pesan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="page_pesan_detail">
+      <soap:operation soapAction="http://tempuri.org/page_pesan_detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_promo">
+      <soap:operation soapAction="http://tempuri.org/add_promo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="promo_list">
+      <soap:operation soapAction="http://tempuri.org/promo_list" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="promo_list_by_id">
+      <soap:operation soapAction="http://tempuri.org/promo_list_by_id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_list_hadiah">
+      <soap:operation soapAction="http://tempuri.org/add_list_hadiah" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="page_poin">
+      <soap:operation soapAction="http://tempuri.org/page_poin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="page_stamps">
+      <soap:operation soapAction="http://tempuri.org/page_stamps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="list_hadiah">
+      <soap:operation soapAction="http://tempuri.org/list_hadiah" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detail_hadiah">
+      <soap:operation soapAction="http://tempuri.org/detail_hadiah" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="redeem_hadiah">
+      <soap:operation soapAction="http://tempuri.org/redeem_hadiah" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kupon_page">
+      <soap:operation soapAction="http://tempuri.org/kupon_page" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detail_kupon">
+      <soap:operation soapAction="http://tempuri.org/detail_kupon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="redeem_kupon">
+      <soap:operation soapAction="http://tempuri.org/redeem_kupon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPoin">
+      <soap:operation soapAction="http://tempuri.org/CheckPoin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="earning_point">
+      <soap:operation soapAction="http://tempuri.org/earning_point" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="redeem_point">
+      <soap:operation soapAction="http://tempuri.org/redeem_point" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="redeem_stamps">
+      <soap:operation soapAction="http://tempuri.org/redeem_stamps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancel_redeem_point">
+      <soap:operation soapAction="http://tempuri.org/cancel_redeem_point" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancel_redeem_stamps">
+      <soap:operation soapAction="http://tempuri.org/cancel_redeem_stamps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="login_cms">
+      <soap12:operation soapAction="http://tempuri.org/login_cms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lupa_password_cms">
+      <soap12:operation soapAction="http://tempuri.org/lupa_password_cms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_hadiah">
+      <soap12:operation soapAction="http://tempuri.org/update_hadiah" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_kupon">
+      <soap12:operation soapAction="http://tempuri.org/add_kupon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tambah_bucket">
+      <soap12:operation soapAction="http://tempuri.org/tambah_bucket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="create_otp">
+      <soap12:operation soapAction="http://tempuri.org/create_otp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lupa_pass">
+      <soap12:operation soapAction="http://tempuri.org/lupa_pass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validation_otp">
+      <soap12:operation soapAction="http://tempuri.org/validation_otp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sign_up">
+      <soap12:operation soapAction="http://tempuri.org/sign_up" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap12:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ganti_email">
+      <soap12:operation soapAction="http://tempuri.org/ganti_email" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="edit_profile">
+      <soap12:operation soapAction="http://tempuri.org/edit_profile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ganti_nomor_hp">
+      <soap12:operation soapAction="http://tempuri.org/ganti_nomor_hp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="contact_us">
+      <soap12:operation soapAction="http://tempuri.org/contact_us" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_faq">
+      <soap12:operation soapAction="http://tempuri.org/get_faq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_kebijakan_privasi">
+      <soap12:operation soapAction="http://tempuri.org/get_kebijakan_privasi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activation_redeem">
+      <soap12:operation soapAction="http://tempuri.org/activation_redeem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_aktivitas_user">
+      <soap12:operation soapAction="http://tempuri.org/get_aktivitas_user" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="page_pesan">
+      <soap12:operation soapAction="http://tempuri.org/page_pesan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="page_pesan_detail">
+      <soap12:operation soapAction="http://tempuri.org/page_pesan_detail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_promo">
+      <soap12:operation soapAction="http://tempuri.org/add_promo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="promo_list">
+      <soap12:operation soapAction="http://tempuri.org/promo_list" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="promo_list_by_id">
+      <soap12:operation soapAction="http://tempuri.org/promo_list_by_id" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add_list_hadiah">
+      <soap12:operation soapAction="http://tempuri.org/add_list_hadiah" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="page_poin">
+      <soap12:operation soapAction="http://tempuri.org/page_poin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="page_stamps">
+      <soap12:operation soapAction="http://tempuri.org/page_stamps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="list_hadiah">
+      <soap12:operation soapAction="http://tempuri.org/list_hadiah" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detail_hadiah">
+      <soap12:operation soapAction="http://tempuri.org/detail_hadiah" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="redeem_hadiah">
+      <soap12:operation soapAction="http://tempuri.org/redeem_hadiah" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kupon_page">
+      <soap12:operation soapAction="http://tempuri.org/kupon_page" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detail_kupon">
+      <soap12:operation soapAction="http://tempuri.org/detail_kupon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="redeem_kupon">
+      <soap12:operation soapAction="http://tempuri.org/redeem_kupon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPoin">
+      <soap12:operation soapAction="http://tempuri.org/CheckPoin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="earning_point">
+      <soap12:operation soapAction="http://tempuri.org/earning_point" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="redeem_point">
+      <soap12:operation soapAction="http://tempuri.org/redeem_point" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="redeem_stamps">
+      <soap12:operation soapAction="http://tempuri.org/redeem_stamps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancel_redeem_point">
+      <soap12:operation soapAction="http://tempuri.org/cancel_redeem_point" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancel_redeem_stamps">
+      <soap12:operation soapAction="http://tempuri.org/cancel_redeem_stamps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://192.168.72.58:5522/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://192.168.72.58:5522/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
